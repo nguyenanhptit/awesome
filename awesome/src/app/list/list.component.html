@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Awesome List</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>url</th>
+        <th>descriptions</th>
+
+        <th>action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let awesome of awesomes | async">
+        <td>{{awesome.url}}</td>
+        <td>{{awesome.descriptions}}</td>
+
+        <td>
+          <a class="btn btn-success" [routerLink]="['/edit', awesome.id]">Edit</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

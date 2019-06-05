@@ -1,0 +1,15 @@
+{
+  "awesomes": [
+    {
+      "id": 4,
+      "url": "nguyenanh",
+      "descriptions": "hackathon"
+    },
+    {
+      "id": 5,
+      "tag": "html",
+      "url": "https://html5doctor.com",
+      "descriptions": "Rất nhiều best pratice để xử lý các tình huống nhỏ thường gặp của html5"
+    }
+  ]
+}

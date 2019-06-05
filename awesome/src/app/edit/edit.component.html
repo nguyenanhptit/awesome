@@ -1,0 +1,30 @@
+<h3>Edit Aewsome</h3>
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Url
+      <br>
+      <textarea type="text" formControlName="url"></textarea>
+    </label>
+  </div>
+  <div *ngIf="editForm.get('url').invalid && editForm.get('url').touched" style="color: red">
+    Url is required and min length is 10
+  </div>
+  <div>
+    <label>
+      Descriptions
+      <br>
+      <textarea type="text" formControlName="descriptions"></textarea>
+    </label>
+  </div>
+  <div *ngIf="editForm.get('descriptions').invalid && editForm.get('descriptions').touched" style="color: red">
+    Descriptions is required and min length is 10
+  </div>
+  <div>
+    <button type="submit" class="btn-success">Submit</button>
+
+    <button  class="btn-danger" (click)="deleteAwesome(awesome.id)" >Delete</button>
+  </div>
+
+
+</form>
